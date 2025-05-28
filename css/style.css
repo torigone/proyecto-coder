@@ -1,0 +1,301 @@
+
+
+/*selector + propiedad + valor*/
+
+/*
+selector { propiedad : valor
+}
+*/
+
+/*letraespecifica*/
+@font-face {
+    font-family: "nicainley";
+    src: url(../fonts/Nickainley-Normal.otf) format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*-----------HEAD---------*/
+@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
+
+body {
+    font-family: "nickainley", cursive;
+    font-size: 24px;
+    color: #333;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /**box-sizing: border-box;**/
+
+}
+
+/*-----------------HEADER-------*/
+
+header{
+    background-color: #f6CEC8;
+}
+
+/*-- header{
+    background-color: #F6CEC8;
+    display: flex;
+    position: sticky;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+} --*/
+header h1 {
+    font-size: 50px;
+    font-weight: 10px;
+    font
+    color: rgb(0, 0, 0);
+
+}
+
+/*-- header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 75%;
+}
+
+
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    
+
+} --*/
+
+.btnboton{
+    border: 2px solid black;
+    color: lightgreen;
+} /**-- chequear--*/
+/*-----------------MAIN-------*/
+
+
+
+
+
+
+.hero{
+    text-align: center;
+    text-shadow: 0cm;
+    border: 2px solid white;
+    height: 70vh;
+    background-image: url(../img/pistacho.jpg);
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+ 
+ 
+
+.hero p {
+    color: black;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.hero h2 {
+    display: inline-block;
+    padding: 10px;
+    font-size: 60 px;
+    margin-top: 1.5cm;
+    
+    
+}
+
+.titulos-header{
+    font-size: 60px;
+    text-decoration: 40%;
+    
+}
+
+
+
+.deportes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.texto{
+    background-color: pink;
+}
+
+
+
+
+.texto , .imagen{
+    width: 50%;
+    padding: 10px;
+}
+
+.mencion-productos{
+    max-width: 100%;
+    height:auto;
+    display: block;
+    margin-bottom: 10px;
+    background-color: rgb(255, 227, 231);
+}
+
+
+
+.cine .titulos{
+    text-align: center;
+}
+.cine div{
+    border:solid black;
+    width:600px;
+
+}
+
+.cine div img {
+    display: block ;
+    width: 600px;
+    height:300px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom:60px;
+    right: 50px;
+    
+}
+
+/**--------GRIDS------*/
+
+.grid-galeria {
+    margin: 15px;
+    width: 95%;
+    border: solid 3px lightblue;
+    display: grid;
+    grid-auto-rows: 450px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.grid-item {
+    border: solid 2px yellowgreen;
+    background-color: bisque;
+}
+
+
+
+.img-3{
+    /*grid-column: span 2;*/
+}
+
+.grid-galeria div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.grid-item {
+    position: relative;
+}
+
+.grid-item h3 {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.493);
+    color: white;
+    width: 100%;
+}
+
+/**grid-template-area (distribuye contenedores escribiendolo en forma de dibujo)
+se usa con grid-area (especificando el contendor)**/
+
+/*-------GRIDS-----*/
+
+/**-----------MEDIA QUERY-----------*/
+@media screen and (max-width:450px) {
+    .hero {
+        font-size: small;
+        flex-direction: column;
+    }
+
+
+    .hero p {
+        text-align: left;
+    }
+}
+    
+
+
+@media screen and (max-width:600px) {
+    .grid-galeria {
+        margin: 0;
+        width: 50%;.
+
+    }
+}
+   
+@media screen and (max-width: 400px) {
+    .grid-galeria {
+        /**---display: none;
+        flex-wrap: ;---*/
+        //*--grid-template-columns: 1fr;--*/
+        flex-direction: column;
+    }
+}
+    
+
+
+
+
+
+
+/*----------MEDIA QUERY-------*/
+
+/*----PESUEDOCLASES-----*/
+.cine a:hover{
+    background-color: black;
+}
+
+.header nav ul li a:active{
+    background-color: blue;
+} /**no me esta funcionando**/
+
+.gallardo a:active{
+    background-color: yellowgreen;
+}
+
+.hero h2::first-letter{
+    font-size: 80px;
+   
+}
+
+
+/*-------------FOOTER---------*/
+
+footer{
+    background-color: gray;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a{
+    color: rgb(46, 46, 46);
+}
+
+
+/**style="width: 10vw; max-width: 60px; min-width: 40px;">**/
