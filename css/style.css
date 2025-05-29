@@ -49,7 +49,6 @@ header{
 header h1 {
     font-size: 50px;
     font-weight: 10px;
-    font
     color: rgb(0, 0, 0);
 
 }
@@ -140,17 +139,21 @@ header nav ul li a {
 
 
 
-.texto , .imagen{
+.texto , .imagen {
     width: 50%;
     padding: 10px;
 }
 
-.mencion-productos{
+.mencion-productos {
     max-width: 100%;
     height:auto;
     display: block;
     margin-bottom: 10px;
     background-color: rgb(255, 227, 231);
+}
+
+.control-icon{
+    background-color: black;
 }
 
 
@@ -159,22 +162,25 @@ header nav ul li a {
     text-align: center;
 }
 .cine div{
-    border:solid black;
-    width:600px;
-
+    border: solid black;
+    width: 600px;
 }
 
 .cine div img {
     display: block ;
     width: 600px;
-    height:300px;
+    height: 300px;
 }
 
 .whatsapp {
     position: fixed;
     bottom:60px;
     right: 50px;
-    
+    z-index: 1;
+}
+
+.carousel-img {
+    max-height: 338px;
 }
 
 /**--------GRIDS------*/
@@ -197,7 +203,7 @@ header nav ul li a {
 
 
 .img-3{
-    /*grid-column: span 2;*/
+    grid-column: span 2;
 }
 
 .grid-galeria div img{
@@ -242,7 +248,7 @@ se usa con grid-area (especificando el contendor)**/
 @media screen and (max-width:600px) {
     .grid-galeria {
         margin: 0;
-        width: 50%;.
+        width: 50%;
 
     }
 }
@@ -251,7 +257,7 @@ se usa con grid-area (especificando el contendor)**/
     .grid-galeria {
         /**---display: none;
         flex-wrap: ;---*/
-        //*--grid-template-columns: 1fr;--*/
+        /*--grid-template-columns: 1fr;--*/
         flex-direction: column;
     }
 }
@@ -269,7 +275,7 @@ se usa con grid-area (especificando el contendor)**/
     background-color: black;
 }
 
-.header nav ul li a:active{
+header nav ul a:hover{
     background-color: blue;
 } /**no me esta funcionando**/
 
@@ -285,17 +291,37 @@ se usa con grid-area (especificando el contendor)**/
 
 /*-------------FOOTER---------*/
 
-footer{
+footer {
     background-color: gray;
     padding: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a{
     color: rgb(46, 46, 46);
 }
 
+@media screen and (max-width: 400px) {
+    footer {
+        font-size: 8px;
+        flex-direction: column;
+    }
+    
+}
 
-/**style="width: 10vw; max-width: 60px; min-width: 40px;">**/
+
+/*-------------CONTACTO---------*/
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    padding-bottom: 100px;
+}
+
