@@ -1,0 +1,132 @@
+body {
+  font-size: 17px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  background-color: rgb(22, 22, 22);
+  color: white;
+}
+
+hr {
+  color: rgb(22, 22, 22);
+}
+
+.nav-link {
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  text-shadow: 0cm;
+  height: 70vh;
+  background-image: url(./img/realestate.jpeg);
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titulos-header {
+  background-color: rgb(22, 22, 22);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.galeria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 80px;
+  gap: 10px;
+}
+
+.galeria div {
+  flex: 1 1 calc(50% - 10px);
+  border: solid 2px rgb(22, 22, 22);
+  font-size: 13px;
+}
+
+.galeria div p {
+  padding-left: 10px;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .galeria div {
+    flex: 1 1 100%;
+  }
+}
+.whatsapp {
+  position: fixed;
+  bottom: 140px;
+  right: 50px;
+  z-index: 1;
+  animation: rotateY 2s infinite alternate ease-in-out;
+  transform-style: preserve-3d;
+}
+
+@keyframes rotateY {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+.color-text {
+  color: rgb(22, 22, 22);
+}
+
+.titulo-propiedades {
+  text-align: center;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.titulo-propiedades:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  background-color: rgb(22, 22, 22);
+  padding: 20px 80px;
+  margin-top: 30px;
+}
+
+.social-icons {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.social-icons a {
+  color: white;
+}
+
+.social-icons a:hover {
+  font-size: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .social-icons {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

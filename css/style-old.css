@@ -34,7 +34,7 @@ body {
 /*-----------------HEADER-------*/
 
 header{
-    background-color: #f6CEC8;
+    background-color: rgb(22, 22, 22);
 }
 
 /*-- header{
@@ -87,12 +87,16 @@ header nav ul li a {
     text-shadow: 0cm;
     border: 2px solid white;
     height: 70vh;
-    background-image: url(../img/pistacho.jpg);
+    background-image: url(../img/realestate.jpeg);
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
     
     
 }
