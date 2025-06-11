@@ -130,7 +130,7 @@ footer {
     text-align: center;
     position: relative;
     background-color: $primary-bg;
-    padding: 20px 80px;
+    padding: 5px 80px;
 }
 
 .social-icons {
@@ -217,8 +217,8 @@ footer {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  padding: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
   color: black;
 }
 
@@ -251,9 +251,11 @@ footer {
 }
 
 .separador-blanco {
-  width: 90%;
-  height: 6px;
-  margin: 40px auto 20px auto;
-  background: linear-gradient(to right, white, #ddd, white);
-  border-radius: 4px;
+  height: 1px;
+  margin: 40px auto;
+  background: linear-gradient(to right, #ccc, #fff, #ccc);
+  border: none;
+  width: 60px;
+  border-top: 1px solid #ccc;
 }
+

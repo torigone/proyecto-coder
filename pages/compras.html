@@ -4,7 +4,7 @@
 <head><!-- cabeza de configuracion -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pistacho</title>
+    <title>Real Estate</title>
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!--vincular bootstrap -->
@@ -28,8 +28,15 @@
                         <a class="nav-link " aria-current="page" href="../index.html">Home</a>
                         <!--falta agregar rutas-->
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Destacados</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Alquileres
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./alquileres.html">Producto 1</a></li>
+                            <li><a class="dropdown-item" href="./alquileres-2.html">Producto 2</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -37,8 +44,8 @@
                             Compras
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Producto 1</a></li>
-                            <li><a class="dropdown-item" href="#">Producto 2</a></li>
+                            <li><a class="dropdown-item" href="./compras.html">Producto 1</a></li>
+                            <li><a class="dropdown-item" href="./compras-2.html">Producto 2</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -62,10 +69,10 @@
                     <img src="../img/depto3.webp" class="d-block w-50 mx-auto my-4 carousel-img" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="../img/depto4.webp" class="d-block w-50 mx-auto my-4 carousel-img" alt="...">
+                    <img src="../img/depto3-balcon.webp" class="d-block w-50 mx-auto my-4 carousel-img" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="../img/depto3.webp" class="d-block w-50 mx-auto my-4 carousel-img" alt="...">
+                    <img src="../img/depto3-pileta.webp" class="d-block w-50 mx-auto my-4 carousel-img" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -87,12 +94,12 @@
                     <p><strong>Precio:</strong> $80.000 USD</p>
                     <p><strong>Ambientes:</strong> Cocina integrada, Living-comedor, Dormitorio, Baño</p>
                     <p><strong>Disponibilidad:</strong> Venta</p>
-                    <p><strong>Direccion:</strong> Cuba 5550, C1429AYP, CABA</p>
+                    <p><strong>Direccion:</strong> Vilela 3000, C1429AYP, CABA</p>
                 </div>
                 <div class="vivienda-map">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.9612943761153!2d-58.4630498242618!3d-34.55453537297199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb42978d0b7c1%3A0xa2ca3899b97ecc5c!2sCuba%205550%2C%20C1428AET%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1749431741934!5m2!1sen!2sar"
-                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.2184123464126!2d-58.478518424887866!3d-34.54802495455795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb69712e70f57%3A0x86971899ae650556!2sVilela%203000%2C%20C1429DAV%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1749655370205!5m2!1sen!2sar"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
@@ -103,41 +110,6 @@
     </section>
 
     <hr class="separador-blanco">
-
-
-
-
-
-
-
-    <!--<section class="info-viviendas">
-        <h2>Detalles de las Viviendas</h2>
-        <div class="grid-viviendas">
-            
-            
-            
-            <div class="vivienda">
-                <h3>Departamento 2 Ambientes</h3>
-                <p><strong>Precio:</strong> $80.000 USD</p>
-                <p><strong>Ambientes:</strong> Cocina integrada, Living-comedor, Dormitorio, Baño</p>
-                <p><strong>Disponibilidad:</strong> Venta</p>
-            </div> -->
-
-    <!--<div class="vivienda">
-                <h3>Departamento 1 Ambiente</h3>
-                <p><strong>Precio:</strong> $60.000 USD</p>
-                <p><strong>Ambientes:</strong> Ambiente único, Cocina, Baño completo</p>
-                <p><strong>Disponibilidad:</strong> Venta / Alquiler</p>
-            </div>
-            <div class="vivienda">
-                <h3>Departamento 3 Ambientes</h3>
-                <p><strong>Precio:</strong> $120.000 USD</p>
-                <p><strong>Ambientes:</strong> Cocina, Living, 2 Dormitorios, Baño, Balcón</p>
-                <p><strong>Disponibilidad:</strong> Venta</p>
-            </div> 
-        </div>
-    </section> -->
-
 
     <footer><!-- pie de pagina -->
         <p>
