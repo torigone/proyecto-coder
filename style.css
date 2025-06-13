@@ -150,6 +150,13 @@ footer {
   color: rgb(22, 22, 22);
 }
 
+.titulo-vivienda {
+  color: rgb(22, 22, 22);
+  text-align: center;
+  margin: 20px auto;
+  text-decoration: underline;
+}
+
 .carouselexample {
   position: relative;
 }
@@ -189,8 +196,9 @@ footer {
 
 .info-viviendas {
   padding: 40px 20px;
-  background-color: rgb(22, 22, 22);
+  background-color: white;
   text-align: center;
+  color: rgb(22, 22, 22);
 }
 
 .info-viviendas h2 {
@@ -198,12 +206,12 @@ footer {
 }
 
 .vivienda {
-  background-color: #ffffff;
+  background-color: rgb(22, 22, 22);
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
   padding: 10px;
-  color: black;
+  color: white;
 }
 
 .vivienda-content {
@@ -215,11 +223,11 @@ footer {
 
 .vivienda-info h3 {
   margin-top: 0;
-  color: black;
+  color: white;
 }
 
 .vivienda-map {
-  color: black;
+  color: white;
 }
 
 @media (max-width: 768px) {
