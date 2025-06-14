@@ -32,7 +32,7 @@ hr {
   text-align: center;
   text-shadow: 0cm;
   height: 70vh;
-  background-image: url(./img/realestate.jpeg);
+  background-image: url(../img/realestate.jpeg);
   background-position: center;
   display: flex;
   flex-direction: column;
