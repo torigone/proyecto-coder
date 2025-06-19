@@ -262,4 +262,218 @@ footer {
   border-top: 1px solid #ccc;
 }
 
+.boton {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.servicios {
+  background-color: #111;
+  color: #f1f1f1;
+  padding: 4rem 2rem;
+}
+.servicios h2 {
+  text-align: center;
+  color: #3498db;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+.servicios .grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.servicios .card {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.7s ease both;
+}
+.servicios .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.servicios .card h3 {
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+.servicios .card p {
+  color: #f1f1f1;
+  line-height: 1.5;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .servicios {
+    padding: 2rem 1rem;
+  }
+  .servicios h2 {
+    font-size: 2rem;
+  }
+  .servicios .card {
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .servicios h2 {
+    font-size: 1.7rem;
+  }
+}
+.nosotros {
+  background-color: #111;
+  color: #f1f1f1;
+  padding: 4rem 2rem;
+}
+.nosotros .intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+}
+.nosotros .intro h2 {
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 1rem;
+  animation: fadeInDown 0.6s ease-out both;
+}
+.nosotros .intro p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #f1f1f1;
+  animation: fadeInUp 0.6s ease-out both;
+}
+.nosotros .equipo h3 {
+  text-align: center;
+  color: #3498db;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.nosotros .equipo .grid-equipo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.nosotros .equipo .miembro {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease both;
+}
+.nosotros .equipo .miembro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+.nosotros .equipo .miembro img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #3498db;
+}
+.nosotros .equipo .miembro h4 {
+  margin-bottom: 0.5rem;
+  color: #3498db;
+}
+.nosotros .equipo .miembro p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #f1f1f1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .nosotros {
+    padding: 2rem 1rem;
+  }
+  .nosotros .intro h2 {
+    font-size: 2rem;
+  }
+  .nosotros .equipo h3 {
+    font-size: 1.7rem;
+  }
+  .nosotros .miembro {
+    padding: 1.5rem;
+  }
+}
+.grid-propiedades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.propiedad {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.propiedad img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.propiedad .descripcion {
+  padding: 16px;
+  font-size: 0.95rem;
+  color: #444;
+  background-color: #fafafa;
+  border-top: 1px solid rgb(249.5, 249.5, 249.5);
+}
+.propiedad:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
 /*# sourceMappingURL=style.css.map */
