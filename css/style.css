@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background-color: rgb(22, 22, 22);
+  background-color: black;
   color: white;
 }
 
@@ -34,25 +34,31 @@ hr {
 
 .hero {
   text-align: center;
-  text-shadow: 0cm;
   height: 70vh;
   background-image: url(../img/realestate.jpeg);
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-
-.titulos-header {
-  background-color: rgb(22, 22, 22);
-  padding: 10px 20px;
+.hero h1 {
+  color: #111;
+  font-size: 4rem;
+  font-weight: 900;
   text-transform: uppercase;
-  border-radius: 10px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7), -1px -1px 2px rgba(255, 255, 255, 0.4);
+  z-index: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
 .galeria {
   display: flex;
   align-items: center;
@@ -118,7 +124,7 @@ hr {
 footer {
   text-align: center;
   position: relative;
-  background-color: rgb(22, 22, 22);
+  background-color: #2a2a2a;
   padding: 5px 80px;
 }
 
@@ -210,9 +216,8 @@ footer {
 
 .info-viviendas {
   padding: 40px 20px;
-  background-color: white;
   text-align: center;
-  color: rgb(22, 22, 22);
+  color: #2a2a2a;
 }
 
 .info-viviendas h2 {
@@ -220,7 +225,7 @@ footer {
 }
 
 .vivienda {
-  background-color: rgb(22, 22, 22);
+  background-color: #2a2a2a;
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
@@ -494,6 +499,270 @@ footer {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+.formulario-card form button:hover {
+  background: #0056b3;
+}
+
+.logo-img {
+  height: 70px;
+  width: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .logo-img {
+    height: 40px;
+  }
+}
+.contacto {
+  margin: 40px auto;
+  padding: 30px 40px;
+  width: 90%;
+  max-width: 500px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contacto input,
+.contacto select,
+.contacto textarea {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.contacto input:focus,
+.contacto select:focus,
+.contacto textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+.contacto textarea {
+  resize: vertical;
+}
+.contacto label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+.contacto button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.contacto button:hover {
+  background-color: #217dbb;
+  transform: translateY(-2px);
+}
+.contacto button:active {
+  transform: scale(0.98);
+}
+
+.contacto {
+  margin: 40px auto;
+  padding: 30px 40px;
+  width: 90%;
+  max-width: 500px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contacto input,
+.contacto select,
+.contacto textarea {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.contacto input:focus,
+.contacto select:focus,
+.contacto textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+.contacto textarea {
+  resize: vertical;
+}
+.contacto label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+.contacto button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.contacto button:hover {
+  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+  transform: translateY(-2px);
+}
+.contacto button:active {
+  transform: scale(0.98);
+}
+
+.pagina-contacto {
+  background: url("../img/realestate.jpeg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+}
+.pagina-contacto .contacto-formulario {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  backdrop-filter: blur(3px);
+}
+.pagina-contacto .formulario-contacto {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.pagina-contacto .formulario-contacto input,
+.pagina-contacto .formulario-contacto textarea,
+.pagina-contacto .formulario-contacto select {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #222;
+  color: #fff;
+}
+.pagina-contacto .formulario-contacto textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.pagina-contacto .formulario-contacto .form-radio {
+  display: flex;
+  justify-content: space-around;
+}
+.pagina-contacto .formulario-contacto .form-radio label {
+  color: #ccc;
+}
+.pagina-contacto .formulario-contacto button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.pagina-contacto .formulario-contacto button:hover {
+  background-color: #0056b3;
+}
+@media screen and (max-width: 768px) {
+  .pagina-contacto .formulario-contacto {
+    padding: 1rem;
+  }
+}
+
+.pagina-operaciones {
+  background-color: #2a2a2a;
+  min-height: 100vh;
+  color: white;
+}
+.pagina-operaciones .wrapper {
+  background-color: transparent;
+  min-height: 100vh;
+}
+.pagina-operaciones h1, .pagina-operaciones h2, .pagina-operaciones h3, .pagina-operaciones p {
+  color: white;
+}
+.pagina-operaciones .card, .pagina-operaciones .vivienda, .pagina-operaciones .descripcion {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  color: #f1f1f1;
+}
+
+.info-viviendas {
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  color: #f1f1f1;
+}
+.info-viviendas h2 {
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+.info-viviendas p {
+  color: #e0e0e0;
+}
+
+.formulario-card form label {
+  color: #f1f1f1;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+.formulario-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.formulario-card form label {
+  color: #f1f1f1;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+.formulario-card form input,
+.formulario-card form select,
+.formulario-card form textarea {
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  border-radius: 4px;
+}
+.formulario-card form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+.formulario-card form button {
+  background: #007bff;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 .formulario-card form button:hover {
   background: #0056b3;
