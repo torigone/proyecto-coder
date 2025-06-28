@@ -6,6 +6,14 @@
   color: variables.$text-light;
   padding: 4rem 2rem;
 
+    h1 {
+    color: variables.$accent;
+    text-align: left;
+    margin-bottom: 3rem;
+    text-shadow: none;
+    text-transform: none;
+  }
+
   h2 {
     color: variables.$accent;
     text-align: center;

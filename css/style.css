@@ -381,12 +381,15 @@ button.verde:active {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  color: #161616;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.hero h1 {
+
+h1 {
   color: #111;
   font-size: 4rem;
   font-weight: 900;
@@ -506,6 +509,13 @@ button.verde:active {
   color: #f1f1f1;
   padding: 4rem 2rem;
 }
+.servicios h1 {
+  color: #3498db;
+  text-align: left;
+  margin-bottom: 3rem;
+  text-shadow: none;
+  text-transform: none;
+}
 .servicios h2 {
   color: #3498db;
   text-align: center;
@@ -538,15 +548,19 @@ button.verde:active {
   background-size: cover;
   min-height: 100vh;
   color: #f1f1f1;
+  background-attachment: fixed;
+  background-color: transparent;
 }
-.pagina-contacto .contacto-formulario {
+
+.contacto-formulario {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 20px;
   backdrop-filter: blur(3px);
 }
-.pagina-contacto .formulario-contacto {
+
+.formulario-contacto {
   background-color: rgba(0, 0, 0, 0.75);
   padding: 2rem;
   border-radius: 10px;
@@ -557,9 +571,9 @@ button.verde:active {
   gap: 1rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
-.pagina-contacto .formulario-contacto input,
-.pagina-contacto .formulario-contacto select,
-.pagina-contacto .formulario-contacto textarea {
+.formulario-contacto input,
+.formulario-contacto select,
+.formulario-contacto textarea {
   padding: 0.75rem;
   background-color: #2a2a2a;
   color: #f1f1f1;
@@ -568,31 +582,31 @@ button.verde:active {
   font-size: 1rem;
   transition: border 0.3s ease, box-shadow 0.3s ease;
 }
-.pagina-contacto .formulario-contacto input:focus,
-.pagina-contacto .formulario-contacto select:focus,
-.pagina-contacto .formulario-contacto textarea:focus {
+.formulario-contacto input:focus,
+.formulario-contacto select:focus,
+.formulario-contacto textarea:focus {
   border-color: #3498db;
   outline: none;
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
-.pagina-contacto .formulario-contacto textarea {
+.formulario-contacto textarea {
   min-height: 100px;
   resize: vertical;
 }
-.pagina-contacto .formulario-contacto label {
+.formulario-contacto label {
   font-size: 0.95rem;
   color: #ccc;
 }
-.pagina-contacto .formulario-contacto .form-radio {
+.formulario-contacto .form-radio {
   display: flex;
   justify-content: space-around;
   gap: 10px;
 }
-.pagina-contacto .formulario-contacto .form-radio label {
+.formulario-contacto .form-radio label {
   color: #ccc;
   font-weight: normal;
 }
-.pagina-contacto .formulario-contacto button {
+.formulario-contacto button {
   background-color: #3498db;
   color: white;
   border: none;
@@ -601,19 +615,19 @@ button.verde:active {
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.pagina-contacto .formulario-contacto button:hover {
+.formulario-contacto button:hover {
   background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
   transform: translateY(-2px);
 }
-.pagina-contacto .formulario-contacto button:active {
+.formulario-contacto button:active {
   transform: scale(0.98);
 }
+
 @media (max-width: 768px) {
-  .pagina-contacto .formulario-contacto {
+  .formulario-contacto {
     padding: 1rem;
   }
 }
-
 .pagina-alquileres {
   background: #111;
   color: #f1f1f1;
@@ -630,15 +644,16 @@ button.verde:active {
   font-size: 2.2rem;
   margin: 2rem auto;
   color: #f1f1f1;
+  text-shadow: none;
 }
 .pagina-alquileres .info-viviendas {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 3rem 2rem;
-  background-color: #111;
+  background-color: rgba(17, 17, 17, 0.85);
 }
-.pagina-alquileres .info-viviendas .vivienda-content {
+.pagina-alquileres .vivienda-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -648,11 +663,11 @@ button.verde:active {
   width: 100%;
   max-width: 1000px;
 }
-.pagina-alquileres .info-viviendas .vivienda-content h2, .pagina-alquileres .info-viviendas .vivienda-content p {
+.pagina-alquileres .vivienda-content h2, .pagina-alquileres .vivienda-content p {
   color: #f1f1f1;
 }
 @media (max-width: 768px) {
-  .pagina-alquileres .info-viviendas .vivienda-content {
+  .pagina-alquileres .vivienda-content {
     grid-template-columns: 1fr;
   }
 }
@@ -673,15 +688,16 @@ button.verde:active {
   font-size: 2.2rem;
   margin: 2rem auto;
   color: #f1f1f1;
+  text-shadow: none;
 }
 .pagina-compras .info-viviendas {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 3rem 2rem;
-  background-color: #111;
+  background-color: rgba(17, 17, 17, 0.85);
 }
-.pagina-compras .info-viviendas .vivienda-content {
+.pagina-compras .vivienda-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -691,11 +707,11 @@ button.verde:active {
   width: 100%;
   max-width: 1000px;
 }
-.pagina-compras .info-viviendas .vivienda-content h2, .pagina-compras .info-viviendas .vivienda-content p {
+.pagina-compras .vivienda-content h2, .pagina-compras .vivienda-content p {
   color: #f1f1f1;
 }
 @media (max-width: 768px) {
-  .pagina-compras .info-viviendas .vivienda-content {
+  .pagina-compras .vivienda-content {
     grid-template-columns: 1fr;
   }
 }
@@ -705,7 +721,7 @@ button.verde:active {
 }
 
 section:first-of-type {
-  background: #111;
+  background-color: none;
   padding-bottom: 3rem;
 }
 
@@ -721,7 +737,7 @@ section:first-of-type {
   justify-content: center;
   align-items: flex-start;
   padding: 3rem 2rem;
-  background-color: #161616;
+  background-color: rgba(17, 17, 17, 0.85);
 }
 .info-viviendas .vivienda-content {
   display: grid;
