@@ -1,0 +1,37 @@
+@use "sass:color";
+@use "../base/variables";
+
+.pagina-operaciones {
+  background: linear-gradient(to bottom right, #1a1a1a, variables.$primary);
+  min-height: 100vh;
+  color: variables.$text-light;
+
+  .wrapper {
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, p {
+    color: variables.$text-light;
+  }
+
+  .vivienda {
+    background-color: color.adjust(white, $alpha: -0.95);
+    border: 1px solid color.adjust(white, $alpha: -0.9);
+    border-radius: 12px;
+    padding: 1rem;
+  }
+
+  .info-viviendas {
+    padding: 40px 20px;
+    text-align: center;
+    color: variables.$text-light;
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: #e0e0e0;
+    }
+  }
+}

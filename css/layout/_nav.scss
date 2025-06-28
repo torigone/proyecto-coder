@@ -1,0 +1,27 @@
+@use "sass:color";
+@use "../base/variables";
+
+.navbar-nav {
+  .nav-item {
+    .nav-link {
+      color: white;
+
+      &:hover {
+        color: variables.$accent;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: color.adjust(variables.$primary-bg, $lightness: 5%);
+      border: none;
+
+      .dropdown-item {
+        color: white;
+
+        &:hover {
+          background-color: #333;
+        }
+      }
+    }
+  }
+}

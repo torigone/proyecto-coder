@@ -1,101 +1,42 @@
-html {
-  height: 100%;
+/* base/_reset.scss */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  font-size: 17px;
-  color: white;
+html, body {
+  height: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  height: 100%;
-  margin: 0;
+  background-color: #111;
+  color: #f1f1f1;
 }
 
-header {
-  background-color: black;
-  color: white;
-}
-
-main {
-  flex: 1;
-}
-
-hr {
-  color: rgb(22, 22, 22);
-}
-
-.nav-link {
-  color: white;
-}
-
-.navbar-toggler {
-  background-color: white;
-}
-
-.hero {
-  text-align: center;
-  height: 70vh;
-  background-image: url(../img/realestate.jpeg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.hero h1 {
-  color: #111;
-  font-size: 4rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7), -1px -1px 2px rgba(255, 255, 255, 0.4);
-  z-index: 1;
-}
-
-@media screen and (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-}
-.galeria {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 80px;
-  gap: 10px;
-}
-
-.galeria div {
-  flex: 1 1 calc(50% - 10px);
-  border: solid 2px rgb(22, 22, 22);
-  font-size: 13px;
-}
-
-.galeria div p {
-  padding-left: 10px;
-}
-
-.galeria img {
-  width: 100%;
-  height: auto;
+img {
+  max-width: 100%;
   display: block;
 }
 
-@media screen and (max-width: 600px) {
-  .galeria div {
-    flex: 1 1 100%;
-  }
+a {
+  text-decoration: none;
+  color: inherit;
 }
-.whatsapp {
-  position: fixed;
-  bottom: 140px;
-  right: 50px;
-  z-index: 1;
-  animation: rotateY 2s infinite alternate ease-in-out;
-  transform-style: preserve-3d;
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 @keyframes rotateY {
@@ -106,303 +47,6 @@ hr {
     transform: rotateY(180deg);
   }
 }
-.color-text {
-  color: rgb(22, 22, 22);
-  margin-bottom: 30px;
-}
-
-.titulo-propiedades {
-  text-align: center;
-  padding: 20px;
-  transition: box-shadow 0.3s ease;
-}
-
-.titulo-propiedades:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
-}
-
-footer {
-  text-align: center;
-  position: relative;
-  background-color: #2a2a2a;
-  padding: 5px 80px;
-}
-
-.social-icons {
-  margin-top: 10px;
-  font-size: 24px;
-}
-
-.social-icons a {
-  color: white;
-}
-
-.social-icons a:hover {
-  font-size: 40px;
-}
-
-@media screen and (min-width: 768px) {
-  .social-icons {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-  }
-}
-.wrapper {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.contacto {
-  margin-top: 40px;
-  color: rgb(22, 22, 22);
-  padding: 10px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 50%;
-}
-
-@media screen and (max-width: 768px) {
-  .contacto {
-    width: 100%;
-  }
-}
-.titulo-vivienda {
-  color: rgb(22, 22, 22);
-  text-align: center;
-  margin: 20px auto;
-  text-decoration: underline;
-}
-
-.carouselexample {
-  position: relative;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  top: 50%;
-  transform: translateY(-50%);
-  background-image: none;
-  width: auto;
-  height: auto;
-}
-
-.carousel-control-prev {
-  left: 20px;
-}
-
-.carousel-control-next {
-  right: 20px;
-}
-
-.carousel-arrow {
-  font-size: 3rem;
-  color: black;
-  transition: transform 0.3s ease, color 0.3s ease;
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  padding: 10px;
-}
-
-.carousel-arrow:hover {
-  transform: scale(1.2);
-  color: #007bff;
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.info-viviendas {
-  padding: 40px 20px;
-  text-align: center;
-  color: #2a2a2a;
-}
-
-.info-viviendas h2 {
-  margin-bottom: 30px;
-}
-
-.vivienda {
-  background-color: #2a2a2a;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
-  padding: 10px;
-  color: white;
-}
-
-.vivienda-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  text-align: left;
-}
-
-.vivienda-info h3 {
-  margin-top: 0;
-  color: white;
-}
-
-.vivienda-map {
-  color: white;
-}
-
-@media (max-width: 768px) {
-  .vivienda-content {
-    grid-template-columns: 1fr;
-  }
-  .vivienda-map iframe {
-    width: 100%;
-    height: 200px;
-  }
-}
-.separador-blanco {
-  height: 1px;
-  margin: 40px auto;
-  background: linear-gradient(to right, #ccc, #fff, #ccc);
-  border: none;
-  width: 60px;
-  border-top: 1px solid #ccc;
-}
-
-.boton {
-  display: inline-block;
-  padding: 0.7rem 1.5rem;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-top: 1rem;
-}
-
-.servicios {
-  background-color: #111;
-  color: #f1f1f1;
-  padding: 4rem 2rem;
-}
-.servicios h2 {
-  text-align: center;
-  color: #3498db;
-  margin-bottom: 3rem;
-  font-size: 2.5rem;
-}
-.servicios .grid-servicios {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-.servicios .card {
-  background-color: #1a1a1a;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
-  animation: fadeInUp 0.7s ease both;
-}
-.servicios .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-.servicios .card h3 {
-  color: #3498db;
-  margin-bottom: 1rem;
-}
-.servicios .card p {
-  color: #f1f1f1;
-  line-height: 1.5;
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 768px) {
-  .servicios {
-    padding: 2rem 1rem;
-  }
-  .servicios h2 {
-    font-size: 2rem;
-  }
-  .servicios .card {
-    padding: 1.5rem;
-  }
-}
-@media (max-width: 480px) {
-  .servicios h2 {
-    font-size: 1.7rem;
-  }
-}
-.nosotros {
-  background-color: #111;
-  color: #f1f1f1;
-  padding: 4rem 2rem;
-}
-.nosotros .intro {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 4rem auto;
-}
-.nosotros .intro h2 {
-  font-size: 2.5rem;
-  color: #3498db;
-  margin-bottom: 1rem;
-  animation: fadeInDown 0.6s ease-out both;
-}
-.nosotros .intro p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #f1f1f1;
-  animation: fadeInUp 0.6s ease-out both;
-}
-.nosotros .equipo h3 {
-  text-align: center;
-  color: #3498db;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-.nosotros .equipo .grid-equipo {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-.nosotros .equipo .miembro {
-  background-color: #1a1a1a;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  transition: all 0.3s ease;
-  animation: fadeInUp 0.8s ease both;
-}
-.nosotros .equipo .miembro:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-.nosotros .equipo .miembro img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: 3px solid #3498db;
-}
-.nosotros .equipo .miembro h4 {
-  margin-bottom: 0.5rem;
-  color: #3498db;
-}
-.nosotros .equipo .miembro p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #f1f1f1;
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -423,220 +67,402 @@ footer {
     transform: translateY(0);
   }
 }
-@media (max-width: 768px) {
-  .nosotros {
-    padding: 2rem 1rem;
-  }
-  .nosotros .intro h2 {
-    font-size: 2rem;
-  }
-  .nosotros .equipo h3 {
-    font-size: 1.7rem;
-  }
-  .nosotros .miembro {
-    padding: 1.5rem;
+header {
+  background-color: #161616;
+  color: white;
+}
+header .navbar {
+  background-color: transparent;
+}
+header .navbar .navbar-brand .logo-img {
+  height: 70px;
+  width: auto;
+}
+@media screen and (max-width: 768px) {
+  header .navbar .navbar-brand .logo-img {
+    height: 40px;
   }
 }
-.grid-propiedades {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 0 10px;
+header .navbar .navbar-toggler {
+  background-color: white;
+}
+header .navbar .nav-link {
+  color: white;
 }
 
-.propiedad {
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  background-color: #fff;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+footer {
+  text-align: center;
+  position: relative;
+  background-color: #161616;
+  padding: 5px 80px;
+}
+footer p {
+  margin: 0;
+  padding: 0.3rem 0;
+}
+footer .social-icons {
+  margin-top: 10px;
+  font-size: 24px;
+}
+footer .social-icons a {
+  color: white;
+}
+footer .social-icons a:hover {
+  font-size: 40px;
+}
+@media screen and (min-width: 768px) {
+  footer .social-icons {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: white;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  color: #3498db;
+}
+.navbar-nav .nav-item .dropdown-menu {
+  background-color: rgb(34.75, 34.75, 34.75);
+  border: none;
+}
+.navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  color: white;
+}
+.navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+  background-color: #333;
+}
+
+.wrapper {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-.propiedad img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.propiedad .descripcion {
-  padding: 16px;
-  font-size: 0.95rem;
-  color: #444;
-  background-color: #fafafa;
-  border-top: 1px solid rgb(249.5, 249.5, 249.5);
-}
-.propiedad:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+
+main {
+  flex: 1;
 }
 
-.boton {
-  display: inline-block;
+.boton,
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
   padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.boton:hover,
+button:hover {
+  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+  transform: translateY(-2px);
+}
+.boton:active,
+button:active {
+  transform: scale(0.98);
+}
+.boton.verde,
+button.verde {
   background-color: #28a745;
   color: white;
-  text-decoration: none;
+  border: none;
   border-radius: 5px;
-  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.boton.verde:hover,
+button.verde:hover {
+  background-color: rgb(30.1449275362, 125.8550724638, 52);
+  transform: translateY(-2px);
+}
+.boton.verde:active,
+button.verde:active {
+  transform: scale(0.98);
 }
 
-.formulario-card form {
+.formulario-card form, .formulario-card,
+.contacto form,
+.contacto,
+.formulario-contacto form,
+.formulario-contacto {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.formulario-card form input, .formulario-card form select, .formulario-card form textarea {
-  width: 100%;
-  padding: 0.75rem;
+.formulario-card form input,
+.formulario-card form select,
+.formulario-card form textarea, .formulario-card input,
+.formulario-card select,
+.formulario-card textarea,
+.contacto form input,
+.contacto form select,
+.contacto form textarea,
+.contacto input,
+.contacto select,
+.contacto textarea,
+.formulario-contacto form input,
+.formulario-contacto form select,
+.formulario-contacto form textarea,
+.formulario-contacto input,
+.formulario-contacto select,
+.formulario-contacto textarea {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 12px;
   font-size: 1rem;
-  border-radius: 4px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
-.formulario-card form button {
-  background: #007bff;
+.formulario-card form input:focus,
+.formulario-card form select:focus,
+.formulario-card form textarea:focus, .formulario-card input:focus,
+.formulario-card select:focus,
+.formulario-card textarea:focus,
+.contacto form input:focus,
+.contacto form select:focus,
+.contacto form textarea:focus,
+.contacto input:focus,
+.contacto select:focus,
+.contacto textarea:focus,
+.formulario-contacto form input:focus,
+.formulario-contacto form select:focus,
+.formulario-contacto form textarea:focus,
+.formulario-contacto input:focus,
+.formulario-contacto select:focus,
+.formulario-contacto textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+.formulario-card form textarea, .formulario-card textarea,
+.contacto form textarea,
+.contacto textarea,
+.formulario-contacto form textarea,
+.formulario-contacto textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.formulario-card form label, .formulario-card label,
+.contacto form label,
+.contacto label,
+.formulario-contacto form label,
+.formulario-contacto label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+.formulario-card form button, .formulario-card button,
+.contacto form button,
+.contacto button,
+.formulario-contacto form button,
+.formulario-contacto button {
+  background-color: #3498db;
   color: white;
-  padding: 0.75rem;
   border: none;
+  padding: 0.75rem;
   border-radius: 5px;
-  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.formulario-card form button:hover {
-  background: #0056b3;
+.formulario-card form button:hover, .formulario-card button:hover,
+.contacto form button:hover,
+.contacto button:hover,
+.formulario-contacto form button:hover,
+.formulario-contacto button:hover {
+  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+  transform: translateY(-2px);
+}
+.formulario-card form button:active, .formulario-card button:active,
+.contacto form button:active,
+.contacto button:active,
+.formulario-contacto form button:active,
+.formulario-contacto button:active {
+  transform: scale(0.98);
 }
 
 .logo-img {
   height: 70px;
   width: auto;
 }
-
 @media screen and (max-width: 768px) {
   .logo-img {
     height: 40px;
   }
 }
-.contacto {
-  margin: 40px auto;
-  padding: 30px 40px;
-  width: 90%;
-  max-width: 500px;
-  background-color: #1e1e1e;
+
+.card,
+.vivienda,
+.propiedad,
+.miembro {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
   color: #f1f1f1;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
 }
-.contacto input,
-.contacto select,
-.contacto textarea {
-  background-color: #2a2a2a;
+.card:hover,
+.vivienda:hover,
+.propiedad:hover,
+.miembro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.card h3, .card h4,
+.vivienda h3,
+.vivienda h4,
+.propiedad h3,
+.propiedad h4,
+.miembro h3,
+.miembro h4 {
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+.card p,
+.vivienda p,
+.propiedad p,
+.miembro p {
   color: #f1f1f1;
-  border: 1px solid #444;
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 1rem;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  line-height: 1.5;
 }
-.contacto input:focus,
-.contacto select:focus,
-.contacto textarea:focus {
-  border-color: #3498db;
-  outline: none;
-  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
-}
-.contacto textarea {
-  resize: vertical;
-}
-.contacto label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.95rem;
-  color: #ccc;
-}
-.contacto button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.contacto button:hover {
-  background-color: #217dbb;
-  transform: translateY(-2px);
-}
-.contacto button:active {
-  transform: scale(0.98);
+.card img,
+.vivienda img,
+.propiedad img,
+.miembro img {
+  max-width: 100%;
+  border-radius: 10px;
 }
 
-.contacto {
-  margin: 40px auto;
-  padding: 30px 40px;
-  width: 90%;
-  max-width: 500px;
-  background-color: #1e1e1e;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+.carousel-arrow {
+  font-size: 3rem;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  padding: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.carousel-arrow:hover {
+  transform: scale(1.2);
+  color: #3498db;
+  background-color: rgb(229.5, 229.5, 229.5);
+}
+
+.titulo-propiedades {
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.titulo-propiedades:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 140px;
+  right: 50px;
+  z-index: 1;
+  animation: rotateY 2s infinite alternate ease-in-out;
+  transform-style: preserve-3d;
+}
+
+@keyframes rotateY {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+.pagina-nosotros {
+  background-color: #111;
   color: #f1f1f1;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  padding: 4rem 2rem;
 }
-.contacto input,
-.contacto select,
-.contacto textarea {
-  background-color: #2a2a2a;
+.pagina-nosotros .intro {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+.pagina-nosotros .intro h2 {
+  color: #3498db;
+  font-size: 2.5rem;
+}
+.pagina-nosotros .intro p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.pagina-nosotros .equipo h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #3498db;
+}
+.pagina-nosotros .equipo .grid-equipo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.pagina-nosotros .equipo .grid-equipo .miembro {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+.pagina-nosotros .equipo .grid-equipo .miembro img {
+  border-radius: 50%;
+  border: 3px solid #3498db;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+.pagina-nosotros .equipo .grid-equipo .miembro h4 {
+  color: #3498db;
+}
+
+.pagina-servicios {
+  background-color: #111;
   color: #f1f1f1;
-  border: 1px solid #444;
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 1rem;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  padding: 4rem 2rem;
 }
-.contacto input:focus,
-.contacto select:focus,
-.contacto textarea:focus {
-  border-color: #3498db;
-  outline: none;
-  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+.pagina-servicios h2 {
+  color: #3498db;
+  text-align: center;
+  margin-bottom: 3rem;
 }
-.contacto textarea {
-  resize: vertical;
+.pagina-servicios .grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
-.contacto label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.95rem;
-  color: #ccc;
+.pagina-servicios .grid-servicios .card {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
-.contacto button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+.pagina-servicios .grid-servicios .card h3 {
+  color: #3498db;
 }
-.contacto button:hover {
-  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
-  transform: translateY(-2px);
+.pagina-servicios .grid-servicios .card p {
+  line-height: 1.5;
 }
-.contacto button:active {
-  transform: scale(0.98);
+.pagina-servicios .grid-servicios .card:hover {
+  transform: translateY(-5px);
+  background-color: rgb(38.75, 38.75, 38.75);
 }
 
 .pagina-contacto {
   background: url("../img/realestate.jpeg") no-repeat center center;
   background-size: cover;
   min-height: 100vh;
-  color: white;
+  color: #f1f1f1;
 }
 .pagina-contacto .contacto-formulario {
   display: flex;
@@ -648,124 +474,125 @@ footer {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2rem;
   border-radius: 10px;
-  width: 100%;
   max-width: 600px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 .pagina-contacto .formulario-contacto input,
 .pagina-contacto .formulario-contacto textarea,
 .pagina-contacto .formulario-contacto select {
   padding: 0.75rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
   background-color: #222;
   color: #fff;
-}
-.pagina-contacto .formulario-contacto textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-.pagina-contacto .formulario-contacto .form-radio {
-  display: flex;
-  justify-content: space-around;
-}
-.pagina-contacto .formulario-contacto .form-radio label {
-  color: #ccc;
-}
-.pagina-contacto .formulario-contacto button {
-  background-color: #007bff;
-  color: white;
-  padding: 0.75rem;
   border: none;
   border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s ease;
+}
+.pagina-contacto .formulario-contacto button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
 }
 .pagina-contacto .formulario-contacto button:hover {
-  background-color: #0056b3;
-}
-@media screen and (max-width: 768px) {
-  .pagina-contacto .formulario-contacto {
-    padding: 1rem;
-  }
+  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
 }
 
-.pagina-operaciones {
-  background-color: #2a2a2a;
+.pagina-alquileres {
+  background: linear-gradient(to bottom right, #1a1a1a, #2c3e50);
   min-height: 100vh;
-  color: white;
+  color: #f1f1f1;
 }
-.pagina-operaciones .wrapper {
-  background-color: transparent;
+.pagina-alquileres .wrapper {
+  background-color: rgba(0, 0, 0, 0.5);
   min-height: 100vh;
 }
-.pagina-operaciones h1, .pagina-operaciones h2, .pagina-operaciones h3, .pagina-operaciones p {
-  color: white;
+.pagina-alquileres h1, .pagina-alquileres h2, .pagina-alquileres h3, .pagina-alquileres p {
+  color: #f1f1f1;
 }
-.pagina-operaciones .card, .pagina-operaciones .vivienda, .pagina-operaciones .descripcion {
+.pagina-alquileres .card, .pagina-alquileres .vivienda, .pagina-alquileres .descripcion {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 1rem;
   color: #f1f1f1;
 }
-
-.info-viviendas {
+.pagina-alquileres .info-viviendas {
   padding: 40px 20px;
   background-color: rgba(255, 255, 255, 0.05);
   text-align: center;
   color: #f1f1f1;
 }
-.info-viviendas h2 {
+.pagina-alquileres .info-viviendas h2 {
   margin-bottom: 30px;
-  color: #ffffff;
+  color: white;
 }
-.info-viviendas p {
+.pagina-alquileres .info-viviendas p {
   color: #e0e0e0;
 }
 
-.formulario-card form label {
+.pagina-compras {
+  background: linear-gradient(to bottom right, #1a1a1a, #2c3e50);
+  min-height: 100vh;
   color: #f1f1f1;
-  font-weight: bold;
-  margin-bottom: 0.2rem;
-  display: block;
+}
+.pagina-compras .wrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+}
+.pagina-compras h1, .pagina-compras h2, .pagina-compras h3, .pagina-compras p {
+  color: #f1f1f1;
+}
+.pagina-compras .card, .pagina-compras .vivienda, .pagina-compras .descripcion {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  color: #f1f1f1;
+}
+.pagina-compras .info-viviendas {
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  color: #f1f1f1;
+}
+.pagina-compras .info-viviendas h2 {
+  margin-bottom: 30px;
+  color: white;
+}
+.pagina-compras .info-viviendas p {
+  color: #e0e0e0;
 }
 
-.formulario-card form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-.formulario-card form label {
+.pagina-operaciones {
+  background: linear-gradient(to bottom right, #1a1a1a, #2c3e50);
+  min-height: 100vh;
   color: #f1f1f1;
-  font-weight: bold;
-  margin-bottom: 0.2rem;
 }
-.formulario-card form input,
-.formulario-card form select,
-.formulario-card form textarea {
-  padding: 0.5rem;
-  font-size: 0.95rem;
-  border-radius: 4px;
+.pagina-operaciones .wrapper {
+  min-height: 100vh;
 }
-.formulario-card form textarea {
-  min-height: 80px;
-  resize: vertical;
+.pagina-operaciones h1, .pagina-operaciones h2, .pagina-operaciones h3, .pagina-operaciones p {
+  color: #f1f1f1;
 }
-.formulario-card form button {
-  background: #007bff;
-  color: white;
-  padding: 0.6rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
+.pagina-operaciones .vivienda {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
 }
-.formulario-card form button:hover {
-  background: #0056b3;
+.pagina-operaciones .info-viviendas {
+  padding: 40px 20px;
+  text-align: center;
+  color: #f1f1f1;
+}
+.pagina-operaciones .info-viviendas h2 {
+  margin-bottom: 30px;
+}
+.pagina-operaciones .info-viviendas p {
+  color: #e0e0e0;
 }
 
 /*# sourceMappingURL=style.css.map */

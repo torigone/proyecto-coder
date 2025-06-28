@@ -1,0 +1,57 @@
+@use "sass:color";
+@use "../base/variables";
+
+.pagina-nosotros {
+  background-color: variables.$bg-dark;
+  color: variables.$text-light;
+  padding: 4rem 2rem;
+
+  .intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+
+    h2 {
+      color: variables.$accent;
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+  }
+
+  .equipo {
+    h3 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: variables.$accent;
+    }
+
+    .grid-equipo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+
+      .miembro {
+        background: #1a1a1a;
+        padding: 2rem;
+        border-radius: variables.$radius;
+        text-align: center;
+
+        img {
+          border-radius: 50%;
+          border: 3px solid variables.$accent;
+          width: 120px;
+          height: 120px;
+          object-fit: cover;
+        }
+
+        h4 {
+          color: variables.$accent;
+        }
+      }
+    }
+  }
+}

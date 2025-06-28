@@ -1,0 +1,40 @@
+@use "sass:color";
+@use "../base/variables";
+
+.pagina-servicios {
+  background-color: variables.$bg-dark;
+  color: variables.$text-light;
+  padding: 4rem 2rem;
+
+  h2 {
+    color: variables.$accent;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+
+    .card {
+      background-color: #1a1a1a;
+      padding: 2rem;
+      border-radius: variables.$radius;
+      transition: variables.$transition;
+
+      h3 {
+        color: variables.$accent;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        background-color: color.adjust(#1a1a1a, $lightness: 5%);
+      }
+    }
+  }
+}

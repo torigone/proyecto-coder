@@ -1,0 +1,30 @@
+@use "sass:color";
+@use "../base/variables";
+
+.titulo-propiedades {
+  text-align: center;
+  padding: 20px;
+  transition: variables.$transition;
+
+  &:hover {
+    box-shadow: variables.$sombra-hover;
+  }
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 140px;
+  right: 50px;
+  z-index: 1;
+  animation: rotateY 2s infinite alternate ease-in-out;
+  transform-style: preserve-3d;
+}
+
+@keyframes rotateY {
+  from {
+    transform: rotateY(0deg);
+  } 
+  to {
+    transform: rotateY(180deg);
+  }
+}

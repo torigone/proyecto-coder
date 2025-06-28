@@ -1,0 +1,41 @@
+@use "sass:color";
+@use "../base/variables";
+
+.pagina-compras {
+  background: linear-gradient(to bottom right, #1a1a1a, variables.$primary);
+  min-height: 100vh;
+  color: variables.$text-light;
+
+  .wrapper {
+    background-color: color.adjust(black, $alpha: -0.5);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, p {
+    color: variables.$text-light;
+  }
+
+  .card, .vivienda, .descripcion {
+    background-color: color.adjust(white, $alpha: -0.95);
+    border: 1px solid color.adjust(white, $alpha: -0.9);
+    border-radius: variables.$radius;
+    padding: 1rem;
+    color: variables.$text-light;
+  }
+
+  .info-viviendas {
+    padding: 40px 20px;
+    background-color: color.adjust(white, $alpha: -0.95);
+    text-align: center;
+    color: variables.$text-light;
+
+    h2 {
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    p {
+      color: #e0e0e0;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@use "../base/variables";
+
+.logo-img {
+  height: 70px;
+  width: auto;
+
+  @media screen and (max-width: 768px) {
+    height: 40px;
+  }
+}

@@ -1,0 +1,29 @@
+@use "../base/variables";
+
+header {
+  background-color: variables.$primary-bg;
+  color: white;
+
+  .navbar {
+    background-color: transparent;
+
+    .navbar-brand {
+      .logo-img {
+        height: 70px;
+        width: auto;
+
+        @media screen and (max-width: 768px) {
+          height: 40px;
+        }
+      }
+    }
+
+    .navbar-toggler {
+      background-color: white;
+    }
+
+    .nav-link {
+      color: white;
+    }
+  }
+}

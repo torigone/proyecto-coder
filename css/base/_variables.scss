@@ -1,0 +1,23 @@
+// base/_variables.scss
+
+// Colores
+$primary: #2c3e50;
+$primary-bg: #161616;
+$color-pr: $primary-bg;
+$text-light: #f1f1f1;
+$accent: #3498db;
+$bg-dark: #111;
+$gris-borde: #e0e0e0;
+$gris-fondo: #fafafa;
+$gris-texto: #444;
+
+// Tipografía
+$font-size-lg: 24px;
+$font-size-md: 17px;
+$font-size-sm: 13px;
+
+// Estética
+$radius: 10px;
+$transition: all 0.3s ease;
+$sombra-normal: 0 4px 8px rgba(0, 0, 0, 0.04);
+$sombra-hover: 0 12px 24px rgba(0, 0, 0, 0.08);
