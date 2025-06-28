@@ -381,7 +381,6 @@ button.verde:active {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   color: #161616;
   display: flex;
   justify-content: center;
@@ -548,7 +547,6 @@ h1 {
   background-size: cover;
   min-height: 100vh;
   color: #f1f1f1;
-  background-attachment: fixed;
   background-color: transparent;
 }
 
