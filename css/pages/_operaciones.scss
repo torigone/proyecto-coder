@@ -1,9 +1,7 @@
 @use "sass:color";
 @use "../base/variables";
 
-.pagina-operaciones {
-  background: variables.$bg-dark;
-  color: variables.$text-light;
+
 
   .wrapper {
     background: none;
@@ -49,4 +47,3 @@
       }
     }
   }
-}

@@ -4,7 +4,7 @@
 
 .carousel-control-prev,
 .carousel-control-next {
-  background: none !important; // fuerza eliminar fondo
+  background: none ; 
   border: none;
   width: auto;
   height: auto;
@@ -16,7 +16,7 @@
 
   &:hover,
   &:focus {
-    background: none !important; // evita hover grande
+    background: none ; 
     box-shadow: none;
   }
 }

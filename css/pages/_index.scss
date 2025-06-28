@@ -15,14 +15,14 @@
   position: relative;
 
   h1 {
-    color: #111; // texto negro
+    color: #111; 
     font-size: 4rem;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-shadow:
       2px 2px 4px rgba(255, 255, 255, 0.7),
-      -1px -1px 2px rgba(255, 255, 255, 0.4); // crea contraste sin recuadro
+      -1px -1px 2px rgba(255, 255, 255, 0.4); 
     z-index: 1;
   }
 }

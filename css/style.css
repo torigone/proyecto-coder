@@ -343,7 +343,7 @@ button.verde:active {
 
 .carousel-control-prev,
 .carousel-control-next {
-  background: none !important;
+  background: none;
   border: none;
   width: auto;
   height: auto;
@@ -356,7 +356,7 @@ button.verde:active {
 .carousel-control-prev:hover, .carousel-control-prev:focus,
 .carousel-control-next:hover,
 .carousel-control-next:focus {
-  background: none !important;
+  background: none;
   box-shadow: none;
 }
 
@@ -636,7 +636,7 @@ button.verde:active {
   justify-content: center;
   align-items: flex-start;
   padding: 3rem 2rem;
-  background-color: #161616;
+  background-color: #111;
 }
 .pagina-alquileres .info-viviendas .vivienda-content {
   display: grid;
@@ -679,7 +679,7 @@ button.verde:active {
   justify-content: center;
   align-items: flex-start;
   padding: 3rem 2rem;
-  background-color: #161616;
+  background-color: #111;
 }
 .pagina-compras .info-viviendas .vivienda-content {
   display: grid;
@@ -700,31 +700,30 @@ button.verde:active {
   }
 }
 
-.pagina-operaciones {
-  background: #111;
-  color: #f1f1f1;
-}
-.pagina-operaciones .wrapper {
+.wrapper {
   background: none;
 }
-.pagina-operaciones section:first-of-type {
+
+section:first-of-type {
   background: #111;
   padding-bottom: 3rem;
 }
-.pagina-operaciones .titulo-vivienda {
+
+.titulo-vivienda {
   text-align: center;
   font-size: 2.2rem;
   margin: 2rem auto;
   color: #f1f1f1;
 }
-.pagina-operaciones .info-viviendas {
+
+.info-viviendas {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 3rem 2rem;
   background-color: #161616;
 }
-.pagina-operaciones .info-viviendas .vivienda-content {
+.info-viviendas .vivienda-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -734,11 +733,11 @@ button.verde:active {
   width: 100%;
   max-width: 1000px;
 }
-.pagina-operaciones .info-viviendas .vivienda-content h2, .pagina-operaciones .info-viviendas .vivienda-content p {
+.info-viviendas .vivienda-content h2, .info-viviendas .vivienda-content p {
   color: #f1f1f1;
 }
 @media (max-width: 768px) {
-  .pagina-operaciones .info-viviendas .vivienda-content {
+  .info-viviendas .vivienda-content {
     grid-template-columns: 1fr;
   }
 }
