@@ -2,40 +2,51 @@
 @use "../base/variables";
 
 .pagina-compras {
-  background: linear-gradient(to bottom right, #1a1a1a, variables.$primary);
-  min-height: 100vh;
+  background: variables.$bg-dark;
   color: variables.$text-light;
 
   .wrapper {
-    background-color: color.adjust(black, $alpha: -0.5);
-    min-height: 100vh;
+    background: none;
   }
 
-  h1, h2, h3, p {
-    color: variables.$text-light;
+  section:first-of-type {
+    background: variables.$bg-dark;
+    padding-bottom: 3rem;
   }
 
-  .card, .vivienda, .descripcion {
-    background-color: color.adjust(white, $alpha: -0.95);
-    border: 1px solid color.adjust(white, $alpha: -0.9);
-    border-radius: variables.$radius;
-    padding: 1rem;
+  .titulo-vivienda {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 2rem auto;
     color: variables.$text-light;
   }
 
   .info-viviendas {
-    padding: 40px 20px;
-    background-color: color.adjust(white, $alpha: -0.95);
-    text-align: center;
-    color: variables.$text-light;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 2rem;
+    background-color: variables.$primary-bg;
 
-    h2 {
-      margin-bottom: 30px;
-      color: white;
+    .vivienda-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: variables.$radius;
+      width: 100%;
+      max-width: 1000px;
+
+      h2, p {
+        color: variables.$text-light;
+      }
     }
 
-    p {
-      color: #e0e0e0;
+    @media (max-width: 768px) {
+      .vivienda-content {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

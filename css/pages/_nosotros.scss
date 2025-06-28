@@ -1,7 +1,9 @@
 @use "sass:color";
 @use "../base/variables";
+@use "../utils/keyframes";
 
-.pagina-nosotros {
+
+.nosotros {
   background-color: variables.$bg-dark;
   color: variables.$text-light;
   padding: 4rem 2rem;
@@ -26,12 +28,13 @@
     h3 {
       text-align: center;
       margin-bottom: 2rem;
+      font-size: 2rem;
       color: variables.$accent;
     }
 
     .grid-equipo {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
 
       .miembro {
@@ -39,6 +42,13 @@
         padding: 2rem;
         border-radius: variables.$radius;
         text-align: center;
+        transition: variables.$transition;
+        animation: fadeInUp 0.8s ease both;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
 
         img {
           border-radius: 50%;
@@ -46,12 +56,27 @@
           width: 120px;
           height: 120px;
           object-fit: cover;
+          margin-bottom: 1rem;
         }
 
         h4 {
           color: variables.$accent;
+          margin-bottom: 0.5rem;
         }
+
+        p {
+          font-size: 0.95rem;
+          color: variables.$text-light;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid-equipo {
+        grid-template-columns: 1fr;
       }
     }
   }
 }
+
+

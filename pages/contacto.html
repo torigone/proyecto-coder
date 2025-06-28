@@ -65,27 +65,35 @@
             </nav>
         </header>
 
-        <main>
-            <form class="contacto" action="https://formsubmit.co/origonetomas4@gmail.com" method="post">
-                <input name="nombre" type="text" placeholder="Nombre" required />
-                <textarea name="consultas" placeholder="Deje su consulta" required></textarea>
-                <select name="opcion" required>
-                    <option value="">Elija una opción...</option>
-                    <option value="belgrano">Belgrano</option>
-                    <option value="villa-urquiza">Villa Urquiza</option>
-                </select>
-                <label>
-                    <input type="radio" name="tipo" value="alquiler" required /> Alquiler
-                </label>
-                <label>
-                    <input type="radio" name="tipo" value="compra" /> Compra
-                </label>
-                <button type="submit">Enviar</button>
+        <main class="pagina-contacto">
+            <section class="contacto-formulario">
+                <form class="formulario-contacto" action="https://formsubmit.co/origonetomas4@gmail.com" method="POST">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
 
-                <input type="hidden" name="_next" value="gracias.html" />
-                <input type="hidden" name="_captcha" value="false" />
-            </form>
+                    <label for="consultas">Deje su consulta:</label>
+                    <textarea id="consultas" name="consultas"></textarea>
+
+                    <label for="opcion">Zona:</label>
+                    <select id="opcion" name="opcion">
+                        <option value="">Seleccione una opción</option>
+                        <option value="belgrano">Belgrano</option>
+                        <option value="villa-urquiza">Villa Urquiza</option>
+                    </select>
+
+                    <div class="form-radio">
+                        <label><input type="radio" name="tipo" value="alquiler"> Alquiler</label>
+                        <label><input type="radio" name="tipo" value="compra"> Compra</label>
+                    </div>
+
+                    <input type="hidden" name="_next" value="gracias.html">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
         </main>
+
 
         <footer><!-- pie de pagina -->
             <p>

@@ -341,6 +341,25 @@ button.verde:active {
   border-radius: 10px;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  background: none !important;
+  border: none;
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-control-prev:hover, .carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus {
+  background: none !important;
+  box-shadow: none;
+}
+
 .carousel-arrow {
   font-size: 3rem;
   color: black;
@@ -352,15 +371,49 @@ button.verde:active {
 .carousel-arrow:hover {
   transform: scale(1.2);
   color: #3498db;
-  background-color: rgb(229.5, 229.5, 229.5);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.titulo-propiedades {
+.hero {
+  text-align: center;
+  height: 70vh;
+  background-image: url(../img/realestate.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hero h1 {
+  color: #111;
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7), -1px -1px 2px rgba(255, 255, 255, 0.4);
+  z-index: 1;
+}
+
+.grid-propiedades {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+@media (max-width: 768px) {
+  .grid-propiedades {
+    grid-template-columns: 1fr;
+  }
+}
+
+.propiepad {
   text-align: center;
   padding: 20px;
   transition: all 0.3s ease;
 }
-.titulo-propiedades:hover {
+.propiepad:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
@@ -372,6 +425,10 @@ button.verde:active {
   animation: rotateY 2s infinite alternate ease-in-out;
   transform-style: preserve-3d;
 }
+.whatsapp img {
+  width: 60px;
+  height: 60px;
+}
 
 @keyframes rotateY {
   from {
@@ -381,79 +438,97 @@ button.verde:active {
     transform: rotateY(180deg);
   }
 }
-.pagina-nosotros {
+.nosotros {
   background-color: #111;
   color: #f1f1f1;
   padding: 4rem 2rem;
 }
-.pagina-nosotros .intro {
+.nosotros .intro {
   max-width: 800px;
   margin: 0 auto 3rem;
   text-align: center;
 }
-.pagina-nosotros .intro h2 {
+.nosotros .intro h2 {
   color: #3498db;
   font-size: 2.5rem;
 }
-.pagina-nosotros .intro p {
+.nosotros .intro p {
   font-size: 1.2rem;
   line-height: 1.6;
 }
-.pagina-nosotros .equipo h3 {
+.nosotros .equipo h3 {
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 2rem;
   color: #3498db;
 }
-.pagina-nosotros .equipo .grid-equipo {
+.nosotros .equipo .grid-equipo {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-.pagina-nosotros .equipo .grid-equipo .miembro {
+.nosotros .equipo .grid-equipo .miembro {
   background: #1a1a1a;
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease both;
 }
-.pagina-nosotros .equipo .grid-equipo .miembro img {
+.nosotros .equipo .grid-equipo .miembro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+.nosotros .equipo .grid-equipo .miembro img {
   border-radius: 50%;
   border: 3px solid #3498db;
   width: 120px;
   height: 120px;
   object-fit: cover;
+  margin-bottom: 1rem;
 }
-.pagina-nosotros .equipo .grid-equipo .miembro h4 {
+.nosotros .equipo .grid-equipo .miembro h4 {
   color: #3498db;
+  margin-bottom: 0.5rem;
+}
+.nosotros .equipo .grid-equipo .miembro p {
+  font-size: 0.95rem;
+  color: #f1f1f1;
+}
+@media (max-width: 768px) {
+  .nosotros .equipo .grid-equipo {
+    grid-template-columns: 1fr;
+  }
 }
 
-.pagina-servicios {
+.servicios {
   background-color: #111;
   color: #f1f1f1;
   padding: 4rem 2rem;
 }
-.pagina-servicios h2 {
+.servicios h2 {
   color: #3498db;
   text-align: center;
   margin-bottom: 3rem;
 }
-.pagina-servicios .grid-servicios {
+.servicios .grid-servicios {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
-.pagina-servicios .grid-servicios .card {
+.servicios .grid-servicios .card {
   background-color: #1a1a1a;
   padding: 2rem;
   border-radius: 10px;
   transition: all 0.3s ease;
 }
-.pagina-servicios .grid-servicios .card h3 {
+.servicios .grid-servicios .card h3 {
   color: #3498db;
 }
-.pagina-servicios .grid-servicios .card p {
+.servicios .grid-servicios .card p {
   line-height: 1.5;
 }
-.pagina-servicios .grid-servicios .card:hover {
+.servicios .grid-servicios .card:hover {
   transform: translateY(-5px);
   background-color: rgb(38.75, 38.75, 38.75);
 }
@@ -467,132 +542,205 @@ button.verde:active {
 .pagina-contacto .contacto-formulario {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 60px 20px;
   backdrop-filter: blur(3px);
 }
 .pagina-contacto .formulario-contacto {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 2rem;
   border-radius: 10px;
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 .pagina-contacto .formulario-contacto input,
-.pagina-contacto .formulario-contacto textarea,
-.pagina-contacto .formulario-contacto select {
+.pagina-contacto .formulario-contacto select,
+.pagina-contacto .formulario-contacto textarea {
   padding: 0.75rem;
-  background-color: #222;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.pagina-contacto .formulario-contacto input:focus,
+.pagina-contacto .formulario-contacto select:focus,
+.pagina-contacto .formulario-contacto textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+.pagina-contacto .formulario-contacto textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.pagina-contacto .formulario-contacto label {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+.pagina-contacto .formulario-contacto .form-radio {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.pagina-contacto .formulario-contacto .form-radio label {
+  color: #ccc;
+  font-weight: normal;
 }
 .pagina-contacto .formulario-contacto button {
   background-color: #3498db;
   color: white;
   border: none;
-  padding: 0.75rem;
-  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .pagina-contacto .formulario-contacto button:hover {
   background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+  transform: translateY(-2px);
+}
+.pagina-contacto .formulario-contacto button:active {
+  transform: scale(0.98);
+}
+@media (max-width: 768px) {
+  .pagina-contacto .formulario-contacto {
+    padding: 1rem;
+  }
 }
 
 .pagina-alquileres {
-  background: linear-gradient(to bottom right, #1a1a1a, #2c3e50);
-  min-height: 100vh;
+  background: #111;
   color: #f1f1f1;
 }
 .pagina-alquileres .wrapper {
-  background-color: rgba(0, 0, 0, 0.5);
-  min-height: 100vh;
+  background: none;
 }
-.pagina-alquileres h1, .pagina-alquileres h2, .pagina-alquileres h3, .pagina-alquileres p {
-  color: #f1f1f1;
+.pagina-alquileres section:first-of-type {
+  background: #111;
+  padding-bottom: 3rem;
 }
-.pagina-alquileres .card, .pagina-alquileres .vivienda, .pagina-alquileres .descripcion {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 1rem;
+.pagina-alquileres .titulo-vivienda {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 2rem auto;
   color: #f1f1f1;
 }
 .pagina-alquileres .info-viviendas {
-  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 2rem;
+  background-color: #161616;
+}
+.pagina-alquileres .info-viviendas .vivienda-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   background-color: rgba(255, 255, 255, 0.05);
-  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1000px;
+}
+.pagina-alquileres .info-viviendas .vivienda-content h2, .pagina-alquileres .info-viviendas .vivienda-content p {
   color: #f1f1f1;
 }
-.pagina-alquileres .info-viviendas h2 {
-  margin-bottom: 30px;
-  color: white;
-}
-.pagina-alquileres .info-viviendas p {
-  color: #e0e0e0;
+@media (max-width: 768px) {
+  .pagina-alquileres .info-viviendas .vivienda-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 .pagina-compras {
-  background: linear-gradient(to bottom right, #1a1a1a, #2c3e50);
-  min-height: 100vh;
+  background: #111;
   color: #f1f1f1;
 }
 .pagina-compras .wrapper {
-  background-color: rgba(0, 0, 0, 0.5);
-  min-height: 100vh;
+  background: none;
 }
-.pagina-compras h1, .pagina-compras h2, .pagina-compras h3, .pagina-compras p {
-  color: #f1f1f1;
+.pagina-compras section:first-of-type {
+  background: #111;
+  padding-bottom: 3rem;
 }
-.pagina-compras .card, .pagina-compras .vivienda, .pagina-compras .descripcion {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 1rem;
+.pagina-compras .titulo-vivienda {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 2rem auto;
   color: #f1f1f1;
 }
 .pagina-compras .info-viviendas {
-  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 2rem;
+  background-color: #161616;
+}
+.pagina-compras .info-viviendas .vivienda-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   background-color: rgba(255, 255, 255, 0.05);
-  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1000px;
+}
+.pagina-compras .info-viviendas .vivienda-content h2, .pagina-compras .info-viviendas .vivienda-content p {
   color: #f1f1f1;
 }
-.pagina-compras .info-viviendas h2 {
-  margin-bottom: 30px;
-  color: white;
-}
-.pagina-compras .info-viviendas p {
-  color: #e0e0e0;
+@media (max-width: 768px) {
+  .pagina-compras .info-viviendas .vivienda-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 .pagina-operaciones {
-  background: linear-gradient(to bottom right, #1a1a1a, #2c3e50);
-  min-height: 100vh;
+  background: #111;
   color: #f1f1f1;
 }
 .pagina-operaciones .wrapper {
-  min-height: 100vh;
+  background: none;
 }
-.pagina-operaciones h1, .pagina-operaciones h2, .pagina-operaciones h3, .pagina-operaciones p {
+.pagina-operaciones section:first-of-type {
+  background: #111;
+  padding-bottom: 3rem;
+}
+.pagina-operaciones .titulo-vivienda {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 2rem auto;
   color: #f1f1f1;
-}
-.pagina-operaciones .vivienda {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 1rem;
 }
 .pagina-operaciones .info-viviendas {
-  padding: 40px 20px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 2rem;
+  background-color: #161616;
+}
+.pagina-operaciones .info-viviendas .vivienda-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1000px;
+}
+.pagina-operaciones .info-viviendas .vivienda-content h2, .pagina-operaciones .info-viviendas .vivienda-content p {
   color: #f1f1f1;
 }
-.pagina-operaciones .info-viviendas h2 {
-  margin-bottom: 30px;
-}
-.pagina-operaciones .info-viviendas p {
-  color: #e0e0e0;
+@media (max-width: 768px) {
+  .pagina-operaciones .info-viviendas .vivienda-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

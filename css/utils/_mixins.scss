@@ -35,3 +35,7 @@
     transform: scale(0.98);
   }
 }
+
+@mixin smooth-transition($props...) {
+  transition: $props;
+}
