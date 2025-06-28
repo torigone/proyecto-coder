@@ -756,4 +756,24 @@ section:first-of-type {
   }
 }
 
+.gracias {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 2rem;
+  text-align: center;
+}
+.gracias h1 {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.gracias p {
+  color: #f1f1f1;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.gracias .boton {
+  margin-top: 1.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */

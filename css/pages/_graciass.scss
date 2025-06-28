@@ -1,0 +1,24 @@
+@use "../base/variables";
+
+.gracias {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 2rem;
+  text-align: center;
+
+  h1 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: variables.$text-light;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .boton {
+    margin-top: 1.5rem;
+  }
+}
